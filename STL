@@ -479,3 +479,239 @@ int main() {
 11. UNORDERED SET:
  .#include<set>
         .Everything is same as set,but it doesn't maintain sorted,but it maintains unique elements
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+12. MAP:
+
+        .#include<map>
+        .It allows unique keys and duplicate values.
+        .It maintains unique keys in sorted order,something similar to set.
+
+
+
+ways to store keys&values in map:
+-------------------------------
+1st way: map<int,int>mp;
+        mp[key]=value; (or) mp.insert({key,value}) (or) mp.emplace({key,value})
+
+2nd way: map<pair<int,int>,int>mp;
+        mp[{key,key}]=value;
+
+
+
+operations:
+        insert() – to insert an element in the map.
+        begin() – return an iterator pointing to the first element in the map.
+        end() – returns an iterator to the theoretical element after the last element.
+        clear() – deletes all the elements in the map
+        find() – to search for an element in the map.
+        erase() – to delete a single element or elements between a particular range.
+        size() – returns the number of elements on the map.
+         empty() – to check if the map is empty or not.
+
+
+
+
+
+
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+  map < int, int > mp;
+  for (int i = 1; i <= 5; i++) {
+    mp.insert({i , i * 10});
+  }
+
+  cout << "Elements present in the map: " << endl;
+  cout << "Key\tElement" << endl;
+  for (auto it = mp.begin(); it != mp.end(); it++) {
+    cout << it -> first << "\t" << it -> second << endl;
+  }
+
+  int n = 2;
+  if (mp.find(2) != mp.end())
+    cout << n << " is present in map" << endl;
+
+  mp.erase(mp.begin());
+  cout << "Elements after deleting the first element: " << endl;
+  cout << "Key\tElement" << endl;
+  for (auto it = mp.begin(); it != mp.end(); it++) {
+    cout << it -> first << "\t" << it -> second << endl;
+  }
+
+  cout << "The size of the map is: " << mp.size() << endl;
+
+  if (mp.empty() == false)
+    cout << "The map is not empty " << endl;
+  else
+    cout << "The map is empty" << endl;
+  mp.clear();
+  cout << "Size of the map after clearing all the elements: " << mp.size();
+}
+        
+-----------------------------------------------------------------------------------------------------------------------------
+13. MULTI-MAP:
+        .#include<map>
+        .It is similar to map, but it stores duplicate keys also.
+        .only map[key] was not used here.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+14. UNORDERD-MAP:
+        .#include<unordered_map>
+        .unorderd map has only unique keys,but not in sorted keys.
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+15. SORT:
+        .instead of sorting algorithms,just sort() is required.
+        .Include #include<algorithm> header file is required
+
+
+
+
+Syntax:
+The sort() function in STL accepts two mandatory parameters: begin, and end, and sorts the range with-in the container in ascending order by default.
+
+sort(begin, end)
+
+
+
+
+Example 1:
+
+int arr[] = {4,2,1}
+
+sort(arr, arr+3);
+
+Output: arr[] = {1,2,4}
+Example 2:
+
+vector<int> vec = {4,2,1}
+
+sort(vec.begin(), vec.end());
+
+Output: vec = {1,2,4}
+
+
+
+
+
+
+Can we also sort a container in descending order using sort()?
+
+
+ #include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+    
+    int arr[] = {4,2,1};
+
+    sort(arr, arr+3, greater<int>());
+    
+    cout<<arr[0]<<" "<<arr[1]<<" "<<arr[2];
+    
+    return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+16. __builtin_popcount():
+
+        .These function returns no.of set bits (or) how many 1's are there for a given binary format.
+
+
+
+
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+    
+    int n = 7;
+    
+    cout<<__builtin_popcount(n);
+    
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+17. next_permutation:
+        . next_permutation() accepts two iterators (begin and end) of a container(example, an array or vector ) as parameters and modifies the container to store the next lexicographically greater permutation of elements within the range [begin, end)
+
+
+        .syntax:   next_permutation(begin, end);
+
+
+
+
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+    
+    string s="123";
+    do{
+        cout<<s<<endl;
+    }
+    while(next_permutation(s.begin(),s.end()));
+    
+    return 0;
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+18. max_element() :
+                        .To find the maximum element of the vector. 
+                         syntax: *max_element(first index,last index);
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    vector<int>v {4,2,5,9,1};
+    cout<<"The elements in the vector are: ";
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"The maximum element is: "<<*max_element(v.begin(),v.end());
+}
+-----------------------------------------------------------------------------------------------------------------
+19. min_element():
+        .To find minimum element of a vector.
+
+       syntax:*max_element(first index,last index);
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    vector<int>v {4,2,5,9,1};
+    cout<<"The elements in the vector are: ";
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"The maximum element is: "<<*max_element(v.begin(),v.end());
+}
