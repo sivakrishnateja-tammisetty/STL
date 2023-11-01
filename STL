@@ -5,14 +5,14 @@ STL ===>It contains 4 components
         Iterators
 
 
->>PAIR: It is a part of utility library
+PAIR ====> It is a part of utility library
         .It is used to insert pair of elements.
+
+
 #include<bits/stdc++.h>
 using namespace std;
-
 int main()
-{
-   
+{   
 pair<int,int>p={1,2};
 cout<<p.second<<endl;
 cout<<p.first<<" "<<p.second<<endl;
@@ -31,8 +31,21 @@ return 0;
 
 
 
+VECTOR ====> It is a dynamic array
+operations :
+push_back()==>it accepts a parameter and insert the element passed in the parameter in the vectors, the element is inserted at the end.
+pop_back()==>it deletes the last element and returns it to the calling function.
+size()==>returns the size of the vector
+empty()==> to check if the vector is empty or not.
+front()==> it returns a reference to the first element of the vector.
+back()==>it returns a reference to the last element of the vector.
+erase()==> it is used to delete a specific element
+insert()==> it is used to insert an element at a specified position.
+begin()==>it returns an iterator pointing to the first element of the vector.
+end()==> it returns an iterator pointing to the element theoretically after the last element of the vector.
+clear()==> deletes all the elements from the vector.
 
-                                         VECTOR ====> It is a dynamic array
+
 
 #include<bits/stdc++.h>
 using namespace std;
