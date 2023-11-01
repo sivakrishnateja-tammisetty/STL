@@ -1,4 +1,4 @@
 STL ===>It contains 3 components
-        Algorithms(functions)
-        containers(data structures)
-        Iterators
+        Algorithms(functions)//merge sort,quick sort,selection sort,heap sort...
+        containers(data structures)//list,vector,map,.........
+        Iterators// .begin() & .end()
