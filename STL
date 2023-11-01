@@ -1,7 +1,7 @@
-1.STL(standard template library) ===>It contains 4 components
+1.STL(standard template library): is a powerful and versatile library in c++ that provides a set of reuseable data strctures and algorithms
+===>It contains 3 components
         Algorithms
         containers
-        functions
         Iterators
 
 -------------------------------------------------------------------------------------------------------------------
