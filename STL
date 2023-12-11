@@ -1,8 +1,14 @@
 1.STL(standard template library): is a powerful and versatile library in c++ that provides a set of reuseable data strctures and algorithms
 ===>It contains 3 components
-        Algorithms
-        containers
-        Iterators
+        Algorithms -> It performs operations of containers.
+        containers -> It is a collection of elements.
+        Iterators ->It can be used for accessing stored data and address.
+
+
+sequence containers : Provides linear, contiguous storage, with fast inserts at the "back" end only(list,vector,deque,forward_list,array).
+Associative containers :It is a variable-sized Container that supports efficient retrieval of elements (values) based on keys(set,map,multiset,multimap).
+unordered associative containers :( unordered sets, unordered multisets, unordered maps, and unordered multimaps).
+conatiner adapaters: (stack,queue,priority_queue).
 
 -------------------------------------------------------------------------------------------------------------------
 2.PAIR ====> It is a part of utility library
