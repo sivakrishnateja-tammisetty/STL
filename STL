@@ -721,3 +721,24 @@ int main(){
     cout<<endl;
     cout<<"The maximum element is: "<<*max_element(v.begin(),v.end());
 }
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20. finding minmax element at a time  using minmax_element():
+
+
+Eg:
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a[]={11,1,22,3,4};
+    auto s=minmax_element(begin(a),end(a));
+    cout<<*s.first<<" "<<*s.second;
+    return 0;
+}
+
+o/p:
+1 22
