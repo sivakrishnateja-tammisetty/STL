@@ -1,4 +1,7 @@
-1.STL(standard template library): is a powerful and versatile library in c++ that provides a set of reuseable data strctures and algorithms
+1.STL(standard template library):
+        is a powerful and versatile library in c++ that provides a set of reuseable data strctures and algorithms.
+        Generic programming-> Datatypes are not specified at the time of implementation of code logic
+
 ===>It contains 3 components
         Algorithms -> It performs operations of containers.
         containers -> It is a collection of elements.
