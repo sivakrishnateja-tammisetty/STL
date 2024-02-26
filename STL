@@ -960,7 +960,105 @@ o/p:
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                                                        Array range queries over range queries
+                                                        sort algo in STL
+
+
+Eg:
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+int a[]={11,13,12,11};
+sort(a,a+4);
+for(const auto &i:a)
+{
+  cout<<i<<" ";
+}
+
+  return 0;
+}
+o/p:11,11,12,13
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                    Search algo in STL
+
+
+
+Eg:
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+int a[]={11,13,12,10,9,2};
+sort(a,a+6);
+if(binary_search(a,a+6,9))            //syntax: binary_search(forwardIterator_first,forwardIterator_last,numberToFind)
+{
+  cout<<"Found"<<endl;
+}
+else
+{
+  cout<<"Not found"<<endl;
+}
+
+  return 0;
+}
+o/p:
+Found
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                        partition and stable_partiton in STL
+
+
+Eg: partition
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+vector<int>v{11,13,12,10,9,2};
+partition(v.begin(),v.end(),[](auto a){return a%2==0;});    //syntax:stable_partition(forwardIterator_first,forwardIterator_last,predicator)
+for(const auto &i:v)
+{
+  cout<<i<<" ";
+}
+
+  return 0;
+}
+
+o/p:
+2 10 12 13 9 11
+
+
+
+
+Eg:stable_partition
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+vector<int>v{11,13,12,10,9,2};
+stable_partition(v.begin(),v.end(),[](auto a){return a%2==0;});                //syntax:stable_partition(forwardIterator_first,forwardIterator_last,predicator)
+for(const auto &i:v)
+{
+  cout<<i<<" ";
+}
+
+  return 0;
+}
+
+o/p:
+12 10 2 11 13 9
+
+
+
 
 
 
