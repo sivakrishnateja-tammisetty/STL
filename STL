@@ -1,11 +1,17 @@
 1.STL(standard template library):
-        is a powerful and versatile library in c++ that provides a set of reuseable data strctures and algorithms.
-        Generic programming-> Datatypes are not specified at the time of implementation of code logic
+
+       * is a powerful and versatile library in c++ that provides a set of reuseable data strctures and algorithms.
+       *STL is  biscally compilation of algorithms, conatiners,Iterators,functions in a minimized version,so that you don't need to write  lenghty lines of code and you can use that stl and get access to a conatiner or algorithm.
+
+        Generic programming-> Datatypes are not specified at the time of implementation of code logic.
+
+
 
 ===>It contains 3 components
         Algorithms -> It performs operations of containers.
         containers -> It is a collection of elements.
         Iterators ->It can be used for accessing stored data and address.
+        functions->
 
 
 sequence containers : Provides linear, contiguous storage, with fast inserts at the "back" end only(list,vector,deque,forward_list,array).
@@ -36,24 +42,78 @@ return 0;
 }
 
 
------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3.VECTOR ====> It is a dynamic array
+3.VECTOR:
+        *Vector is a conatiner,which  is  dynamic in  nature like you can  always increase  the size of vector whenever you wish to so if there is a requriment where you dont know the size of particular data structure that will required.
+        *Vector is a container,which stores elements in a similar fashion as array does.
 
 OPERATIONS:
 push_back()==>it accepts a parameter and insert the element passed in the parameter in the vectors, the element is inserted at the end.
+emplace_back() ==>Similar to push_back()
 pop_back()==>it deletes the last element and returns it to the calling function.
 size()==>returns the size of the vector
 empty()==> to check if the vector is empty or not.
 front()==> it returns a reference to the first element of the vector.
 back()==>it returns a reference to the last element of the vector.
 erase()==> it is used to delete a specific element
-insert()==> it is used to insert an element at a specified position.
+insert()==> it is used to insert an element at before the secified position.
 begin()==>it returns an iterator pointing to the first element of the vector.
 end()==> it returns an iterator pointing to the element theoretically after the last element of the vector.
 clear()==> deletes all the elements from the vector.
 
 
+Eg:using vector of pairs & push_back() emplace_back()
+
+vector<pair<int,int>>v;
+v.push_back({1,2});         //Here curly braces are mandatory
+v.emlace_back(3,4);         //Here curly braces are not required
+
+
+Eg:
+vector<int>v(3,100);  //output: {100 100 100}
+
+Eg:vector<int>v(3); //output:{0 0 0} (or) any Garbage values depends on compiler
+
+
+
+Eg:  copying
+vector<int>v1(3,100);     //{100,100,100}
+vector<int>v2(v1);        //{100,100,100}
+
+
+Eg:Accessing vector elements using [] & v.at(index) & iterator
+
+vector<int>v={11,12,13,14};
+ cout<<v[1]  // 12
+ cout<<v.at(1)  //12
+vector<int>::iterator it=v.begin();
+it++;
+cout<<*it;  //12
+
+
+Eg: erase()
+vector<int>v={11,2,3,44,7,4};
+v.erase(v.begin()+1,v.begin()+3);   //output:{ 11,44,7,4}
+
+vector<int>p={11,2,3,44,7,4};
+p.erase(v.begin()+2);          //output: {11,2,44,7,4}
+
+
+Eg:insert()
+vector<int>v={0,1,2,4,5};
+v.insert(v.begin()+3,3) ;       //output: {0,1,2,3,4,5}
+
+vector<int>v{11,44,55};
+v.insert(v.begin()+1,2,22);      //output :{11,22,22,44,55}
+
+
+
+
+
+
+
+Eg:
 
 #include<bits/stdc++.h>
 using namespace std;
