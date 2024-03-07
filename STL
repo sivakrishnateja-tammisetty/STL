@@ -1,4 +1,4 @@
-1.STL(standard template library):
+ 1.STL(standard template library):
 
        * is a powerful and versatile library in c++ that provides a set of reuseable data strctures and algorithms.
        *STL is  biscally compilation of algorithms, conatiners,Iterators,functions in a minimized version,so that you don't need to write  lenghty lines of code and you can use that stl and get access to a conatiner or algorithm.
@@ -67,7 +67,7 @@ Eg:using vector of pairs & push_back() emplace_back()
 
 vector<pair<int,int>>v;
 v.push_back({1,2});         //Here curly braces are mandatory
-v.emlace_back(3,4);         //Here curly braces are not required
+v.emplace_back(3,4);         //Here curly braces are not required
 
 
 Eg:
@@ -108,6 +108,38 @@ vector<int>v{11,44,55};
 v.insert(v.begin()+1,2,22);      //output :{11,22,22,44,55}
 
 
+Eg:size()
+ vector<int>v={11,2,3,4};
+cout<<v.size()<<endl; //output: 4
+
+
+Eg:pop_back()
+vector<int>v={11,22,33,4};
+v.pop_back()  ;  //{11,22,33}
+
+
+
+Eg:swap()
+
+vector<int>v1={1,2};
+vector<int>v2={3,4};
+v1.swap(v2);              ->v1{3,4} v2{1,2}
+           
+
+
+
+Eg:clear()
+vector<int>v={1,2,3};
+v.clear();             //It erases  elements in an entire  vector
+
+
+Eg:empty()
+
+vector<int>v={11,2,3};
+v.empty()
+
+
+
 
 
 
@@ -146,14 +178,16 @@ int main() {
   v.clear();
   cout << "Size of the vector after clearing the vector: " << v.size();
 }
------------------------------------------------------------------------------------------------------
 
-4. LIST
-.A list in STL is a contiguous container that allows the inserting and erasing of elements in constant time and iterating in both directions.
-.Include header <list>
-. List is same as vector, dynamic in nature.
-.List maintains doubly-linkedlist internally.
-.List is bi-directional.
+
+
+-----------------------------------------------------------------------------------------------------
+LIST:
+      *A list in STL is a contiguous container that allows the inserting and erasing of elements in constant time and iterating in both directions.
+      *Include header <list>
+      *List is same as vector, dynamic in nature.
+      *List maintains doubly-linkedlist internally.
+      *List is bi-directional.
 
 OPERATIONS:
         .push_back() – to insert an element at the end of the list.
@@ -275,15 +309,63 @@ int main()
     
 }
 -----------------------------------------------------------------------------------------------------------
-6. STACK: It follows LIFO
+6. STACK: 
+      *It follows LIFO
 OPERATIONS:
-        .push()
+        .push() or emplace()
         .pop()
         .top()
-        .swap()
         .size()
         .empty()
-        .emplace() – to insert an element in the stack.
+        .swap()
+
+
+
+
+Eg:swap()
+
+stack<int>s;
+   s.push(1);
+   s.push(2);
+   s.push(3);
+   s.push(4);
+   s.push(5);
+   
+   
+   stack<int>s2;
+   s2.swap(s);
+   
+   cout<<"\nElements of stack2:\n";
+   while(!s2.empty())
+   {
+       cout<<s2.top()<<" ";
+       s2.pop();
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
 
 
 
@@ -315,15 +397,23 @@ int main()
     printstack(s);
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------
-7.QUEUE:It follows FIFO.A queue is a linear list of elements in which deletions can take place only at one end called the front, and insertions can take place only at the end called the rear
+
+
+
+
+7.QUEUE:
+      *It follows FIFO.A queue is a linear list of elements in which deletions can take place only at one end called the front, and insertions can take place only at the end called the rear.
 
 OPERATIONS:
         .push()
         .pop()
+        .front()
+        .back() 
         .top()
         .swap()
         .size()
         .empty()
+       
 
 
 
